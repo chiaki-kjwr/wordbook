@@ -11,8 +11,8 @@ body{
   width :200px;
   padding:7px;
   border-radius:5px;
-  background:#00aaff;
-  box-shadow:0 4px 0 #0088cc;
+  background:#bf73e6;
+  box-shadow:0 4px 0 #ac73e6;
   cursor:pointer;
 }
 
@@ -22,8 +22,32 @@ body{
   height:100px;
   cursor:pointer;
   font-size:38px;
-  line-heght:100px;
+  line-height:100px;
+  perspective:100px;
+  transform-style:preserve-3d;
+  transition:transform .8s;
 }
 #btn hover{
   opacity:0.8;
+}
+
+#cardfront,#card-back{
+  display: block;
+  width:100%;
+  border-radius:5px;
+  position:absolute;
+  backface-visibility:hidden;
+}
+#card-front{
+  background: #fff;
+  color:#333;
+
+}
+
+#card-back{
+  background:#ac73e6;
+  transform:rotateY(180deg);
+
+  color:#333;
+
 }
