@@ -1,0 +1,29 @@
+body{
+  margin:0;
+  background-color: #e0e0e0;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+
+}
+#btn{
+  margin: 0 auto;
+  width :200px;
+  padding:7px;
+  border-radius:5px;
+  background:#00aaff;
+  box-shadow:0 4px 0 #0088cc;
+  cursor:pointer;
+}
+
+#card {
+  margin:60px auto 20px;
+  width:400px;
+  height:100px;
+  cursor:pointer;
+  font-size:38px;
+  line-heght:100px;
+}
+#btn hover{
+  opacity:0.8;
+}
