@@ -8,7 +8,7 @@
 
   </head>
   <body>
-    <div id ="card">
+    <div id ="card" >
       <div id ="card front">
 
       </div>
@@ -20,6 +20,24 @@
 
     <div id="btn">NEXT</div>
 
+    <script>
+  (function() {
+    "use strict";
+
+    var words = [
+      {'en':'read,'ja':'読む'}
+    ]
+
+    var card = document.getElementById('card');
+    card.addEventListenr('click',function() {
+      flip()
+    });
+
+    function frip() = 
+      card.className = card.className === '' ? 'open' :'';
+
+  }
+      </script>
 
 
 

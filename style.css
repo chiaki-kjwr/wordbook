@@ -49,5 +49,8 @@ body{
   transform:rotateY(180deg);
 
   color:#333;
+  transform:rotateY(180deg);
+}
+.open {
 
 }
