@@ -17,7 +17,7 @@
     <div id="btn">NEXT</div>
 
     <script>
-  (function() {
+  function() {
     "use strict";
 
     var words = [
@@ -31,11 +31,15 @@
     card.addEventListener('click',function() {
       flip()
     });
-    btn.addEventListenerU('click', function(){
+    btn.addEventListener('click', function(){
       next();
     }); 
 
     function next(){
+      if(card.className ===  "open"){
+        card.addEventListener('transitioned,setCard');
+        flip();
+      }
       var num = Math.floor(Math.random() * words.length);
       carnFront.innerHTML = words[num]['en'];
       carnBack.innerHTML = words[num]['ja'];
