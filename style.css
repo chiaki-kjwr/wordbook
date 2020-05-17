@@ -27,19 +27,19 @@ body{
   transform-style:preserve-3d;
   transition:transform .8s;
 }
-#btn hover{
+#btn:hover{
   opacity:0.8;
 }
 
-#cardfront,#card-back{
+#card-front,#card-back {
   display: block;
   width:100%;
   border-radius:5px;
   position:absolute;
   height:100px;
-  backface-visibility:hidden;
+  backface-visibility: hidden;
 }
-#card-front{
+#card-front {
   background: #fff;
   color:#333;
 }
