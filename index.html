@@ -63,7 +63,7 @@ body{
   </style>
   </head>
   <body>
-    <div id="card">
+    <div id="card",class="open">
       <div id ="card-front">front</div>
       <div id ="card-back">back</div>
 
@@ -77,7 +77,8 @@ body{
 
     var words = [
       {'en':'read','ja':'読む'},
-      {'en':'run','ja':'走る'}
+      {'en':'run','ja':'走る'},
+      {'en':'sleep','ja':'眠る'}
     ];
 
     var card = document.getElementById('card');
@@ -87,29 +88,40 @@ body{
     card.addEventListener('click',function() {
       flip();
     });
-    function flip() {
-      card.className = card.className === '' ? 'open' :'';
-    }
 
     btn.addEventListener('click', function(){
       next();
     });
 
     function next(){
-      if(card.className ===  "open"){
-        card.addEventListener('transitioned,setCard');
+      if(card.className === 'open'){
+        card.addEventListener('transitioned',setCard);
         flip();
+      }else {
+      setCard();
       }
+    }
+    function setCard(){
       var num = Math.floor(Math.random() * words.length);
       cardFront.innerHTML = words[num]['en'];
       cardBack.innerHTML = words[num]['ja'];
-
+      card.removeEventListener('transitioned',setCard);
     }
-    next();
-  })();
+    setCard();
 
-    const item1 = document.querySelector()
+    window.addEventListener('keyup',function(e) {
+    if(e.keyCode === 70) {
+      flip();
+    }else if(e.keyCode === 78) {
+      next();
+    }
+    });
 
-</script>
-  </body>
-  </html>
+    function flip() {
+      card.className = card.className === '' ? 'open' :'';
+    }
+
+    })();
+  </script>
+</body>
+</html>
